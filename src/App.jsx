@@ -5,11 +5,11 @@ import Footer from "./components/Footer"
 function App() {
 
   return (
-    <>
-      <NavBar></NavBar>
-      <ProductsList></ProductsList>
-      <Footer></Footer>
-    </>
+    <div className="min-h-screen flex flex-col">
+      <NavBar/>
+      <ProductsList className="flex-grow"/>
+      <Footer/>
+    </div>
   )
 }
 

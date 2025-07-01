@@ -31,6 +31,8 @@ function useCart() {
     // const newProductsList = [...myProductsList, newProduct] //(SPREAD OPERATOR)
     setMyProductsList( newProductsList )
     localStorage.setItem(key, JSON.stringify(newProductsList)) //CONVERTIR A FORMATO JSON
+
+    window.alert('Producto añadido al carrito');
   }
 
   // ELIMINAR UN PRODUCTO DE MYPRODUCTLIST

@@ -4,7 +4,7 @@ function Product ({product}) {
   const { addProduct } = useCartContext()
 
   return (
-    <div className="flex max-lg:flex-col justify-center items-center border border-gray-400 lg:w-96 w-48 rounded-3xl shadow-xl shadow-gray-300 bg-sky-800">
+    <div className="flex max-xl:flex-col justify-center items-center border border-gray-400 lg:w-96 w-48 rounded-3xl shadow-xl shadow-gray-300 bg-sky-800">
       {/* IMAGEN DEL PRODUCTO */}
       <img src={product.img} alt="producto_1" className="lg:h-56 h-28 p-2 rounded-3xl"/>
 

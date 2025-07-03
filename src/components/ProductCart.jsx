@@ -12,9 +12,10 @@ function ProductCart ({product}) {
   }, [counter]); // SE EJECUTA CADA VEZ QUE COUNTER CAMBIA
 
   return (
-    <div className="grid grid-cols-3 items-center lg:w-xl w-64 rounded-xl bg-sky-800 p-2">
+    <div className="grid grid-cols-3 items-center lg:w-xl w-64 rounded-xl bg-sky-800 p-2
+                  dark:bg-sky-950">
       {/* NOMBRE Y PRECIO */}
-      <div className="flex flex-col text-center item text-white p-0.5">
+      <div className="flex flex-col text-center item p-0.5">
         <h3 className="lg:text-xl text-xs">{product.nombre}</h3>
         <p className="max-lg:text-xs"><strong>Precio:</strong> ${product.precio}</p>
       </div>
@@ -35,8 +36,10 @@ function ProductCart ({product}) {
 
       <div className="flex justify-center">
         {/* BOTÓN ELIMINAR PRODUCTO */}
-        <button className="bg-red-500 lg:w-16 w-10 rounded-lg border border-green-900 hover:scale-105 hover:bg-red-700" onClick={() => deleteProduct(product.id)}>
-          <i className="bi bi-cart-dash lg:text-2xl"></i>
+        <button className="bg-red-500 lg:w-16 w-10 rounded-lg border border-green-900 hover:scale-105 hover:bg-red-700
+                          dark:bg-red-700 dark:hover:bg-red-500" 
+          onClick={() => deleteProduct(product.id)}>
+            <i className="bi bi-cart-dash lg:text-2xl"></i>
         </button>
       </div>
     </div>

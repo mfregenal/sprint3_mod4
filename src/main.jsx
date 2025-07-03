@@ -4,11 +4,14 @@ import { CartProvider } from './context/CartContext.jsx';
 import './index.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import App from './App.jsx'
+import { ThemeProvider } from './context/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CartProvider>
-      <App />
-    </CartProvider>
-  </StrictMode>,
+    <ThemeProvider>
+      <CartProvider>
+        <App />
+      </CartProvider>
+    </ThemeProvider>
+  </StrictMode>
 )

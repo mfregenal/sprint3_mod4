@@ -17,7 +17,7 @@ function Product ({product}) {
     <div className="flex max-xl:flex-col justify-center items-center border border-gray-400 xl:w-96 w-48 rounded-3xl shadow-xl shadow-gray-400 bg-sky-800
                   dark:bg-sky-950 dark:shadow-none dark:border-gray-600">
       {/* IMAGEN DEL PRODUCTO */}
-      <img src={product.img} alt="producto_1" className="lg:h-56 h-28 p-2 rounded-l-3xl bg-white dark:bg-gray-300"/>
+      <img src={product.img} alt="producto_1" className="h-56 p-2 xl:rounded-l-3xl max-xl:rounded-t-3xl bg-white dark:bg-gray-300"/>
 
       <div className="flex flex-col gap-4 text-center max-lg: items-center text-white lg:p-0.5 p-2
                     dark:text-gray-300">

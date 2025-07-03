@@ -7,8 +7,8 @@ function ShoppingCart({toggleMenu}) {
 
   return (
     <>
-      <header>
-        <nav className="flex justify-end items-center lg:w-3xl w-72 bg-sky-800
+      <header className="flex justify-center w-full">
+        <nav className="flex justify-end items-center lg:w-3xl w-11/12 bg-sky-800
                       dark:bg-sky-950">
           <button onClick={() => toggleMenu()}>
             <i className="bi bi-x m-1 text-4xl"></i>
@@ -16,19 +16,19 @@ function ShoppingCart({toggleMenu}) {
         </nav>
       </header>
 
-      <main className="flex flex-col justify-center items-center bg-white/70 lg:w-3xl w-72 p-4 gap-4 overflow-y-scroll h-auto
+      <main className="flex flex-col justify-center items-center bg-white/70 lg:w-3xl w-11/12 p-4 gap-4 overflow-y-scroll h-auto
                       dark:bg-gray-400/70">
         { myProductsList.length === 0
           ? <p className="text-center text-lg text-black">Tu carrito está vacío</p>
           : myProductsList.map( (product) => (
-              <div key={product.id}>
+              <div key={product.id} className="flex justify-center items-center w-full">
                 <ProductCart product={product}></ProductCart>
               </div>
             ))
         }
       </main>
 
-      <footer className="flex justify-center items-center lg:w-3xl w-72 bg-sky-800 text-xl p-2
+      <footer className="flex justify-center items-center lg:w-3xl w-11/12 bg-sky-800 text-xl p-2
                         dark:bg-sky-950">
         <p><strong>Monto Total:</strong> ${myProductsList.reduce( (total, product) => total + product.precio * product.cantidad, 0 )}</p>
       </footer>
